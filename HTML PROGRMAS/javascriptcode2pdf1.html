@@ -1,0 +1,26 @@
+<html> 
+    <head>
+        <title>
+            the code for the 2nd one 
+
+        </title>
+    </head>
+    <body>
+        <img src="dhoni.jpg.jpg" id="img" onmouseover="big()"onmouseout="small()">
+        <button onclick="add()"> add to cart</button>
+        <p id="mag"> </p>
+    <script>
+        function big(){
+            document.querySelector("#img").style.width="250px";
+        }
+        function small(){
+            document.querySelector("#img").style.width="100px";
+        }
+        function add(){
+            document.querySelector("#mag").innerText="item addedd to the cart";
+
+        }
+    </script>
+    </body>
+
+</html>

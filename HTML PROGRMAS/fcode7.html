@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>
+        the form of the hospital
+    </title>
+</head>
+
+<body style="text-align:center;">
+
+<form>
+
+name:
+<input type="text"
+id="name"
+onblur="checkname()">
+
+<p id="na"></p>
+
+email:
+<input type="email"
+id="email"
+onblur="checkemail()">
+
+<p id="em"></p>
+
+password:
+<input type="password"
+id="password"
+onblur="checkpassword()">
+
+<p id="pa"></p>
+
+Age:
+<input type="number"
+id="age"
+onblur="checkAge()">
+
+<p id="ag"></p>
+
+<button onclick="checkform(event)">
+
+click on me
+
+</button>
+
+</form>
+
+<script>
+
+function checkname(){
+
+let x=document.querySelector("#name").value
+
+if(x.length<5){
+
+document.querySelector("#na").innerText=
+"name is not valid"
+
+}
+
+else{
+
+document.querySelector("#na").innerText=
+"name is valid"
+
+}
+
+}
+
+function checkemail(){
+
+let x=document.querySelector("#email").value
+
+if(!x.includes("@")){
+
+document.querySelector("#em").innerText=
+"email is not valid"
+
+}
+
+else{
+
+document.querySelector("#em").innerText=
+"email is valid"
+
+}
+
+}
+
+function checkpassword(){
+
+let x=document.querySelector("#password").value
+
+if(/[0-9]/.test(x)
+&&
+/[a-z]/.test(x)){
+
+document.querySelector("#pa").innerText=
+"password is valid"
+
+}
+
+else{
+
+document.querySelector("#pa").innerText=
+"password is not valid"
+
+}
+
+}
+
+function checkAge(){
+
+let x=document.querySelector("#age").value
+
+if(x<18){
+
+document.querySelector("#ag").innerText=
+"age is not valid"
+
+}
+
+else{
+
+document.querySelector("#ag").innerText=
+"age is valid"
+
+}
+
+}
+
+function checkform(event){
+
+event.preventDefault();
+
+checkname();
+
+checkemail();
+
+checkpassword();
+
+checkAge();
+
+alert("Form Submitted Successfully");
+
+}
+
+</script>
+
+</body>
+</html>

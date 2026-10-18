@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" onsubmit="return validateForm()">
+        Name: 
+        <input type="text" id="namebox" minlength="3" onkeyup="checkName()">
+        Email:
+        <input type="email" id="emailbox" onblur="checkEmail()">
+        <br>
+        password:
+        <input type="password" name="" id="password" onkeyup="checkPass()">
+        <span id="strengthMessage">Enter password</span>
+        <img src="dhoni.jpg.jpg" id="image" style="width: 50px; border: 1px solid black; transition: width 1s;"
+        onmouseover="image.style.width = '300px'"
+        onmouseout="image.style.width = '50px'"
+        >
+        <input type="checkbox" name="" id="cb">
+    </form>
+
+    <script>
+        function checkName() {
+            let namebox = document.getElementById("namebox");
+            namebox.reportValidity();
+        }
+        function checkEmail() {
+            let emailbox = document.getElementById("emailbox");
+            if (emailbox.value.endsWith("@cb.students.amrita.edu")) {
+                emailbox.setCustomValidity('')
+            } else {
+                emailbox.setCustomValidity('Enter an Amrita Email')
+            }
+            emailbox.reportValidity();
+        }
+        function checkPass() {
+            let password = document.getElementById("password").value;
+            let strength = "";
+            if (password.length < 4) {
+                strength = "weak";
+            } else if (password.length < 8) {
+                strength = "medium"
+            } else {
+                strength = "strong"
+            }
+            document.getElementById("strengthMessage").innerText = strength;
+        }
+        function validateForm() {
+            if (namebox.checkValidity() && emailbox.checkValidity()){
+                alert("logging in")
+                return true
+            }
+            alert("Invalid")
+            return false;
+        }
+    </script>
+</body>
+</html>

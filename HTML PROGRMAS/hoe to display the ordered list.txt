@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>
+in this code we are going  to write the code for the display of the ordered list
+</title>
+</head>
+<body>
+<h1> my subject </h1>
+<ol>
+<li> mathematics</li>
+<li> physcis </li>
+<li> chemistry </li>
+<li> Sanskrit </li>
+<li> English </li>
+</ol>
+</body>
+</html>
+

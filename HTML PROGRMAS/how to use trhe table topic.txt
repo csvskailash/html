@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>
+this is the code in which we are  going to write the  code with the table tags 
+</title>
+</head>
+<body>
+<table>
+<tr> 
+<th> name </th>
+<th> roll no </th>
+</tr
+<tr>
+<td> kailash</td>
+<td> 1664 </td.
+</tr>
+</table>
+
